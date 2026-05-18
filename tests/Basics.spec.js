@@ -124,4 +124,30 @@ test("Multi Options Dropdown", async ({page}) => {
     await page.pause();
 })
 
-test.only("Handle")
+test("Handle Radio Button", async({page})=> {
+
+    await page.goto("https://web-locators-static-site-qa.vercel.app/");
+
+    await page.getByText("Radio").click();
+
+    await page.locator("//div[@class='RadioScreen_Container1']//input[@value='female']").click();
+
+    await page.pause();
+})
+
+test("Handle Checkbox", async({page})=> {
+
+    await page.goto("https://web-locators-static-site-qa.vercel.app/");
+
+    await page.getByText("Checkbox").click();
+
+    // const chk1 = page.locator(".Checkbox_section1 div")
+    //             .filter({hasText: 'QA'})
+    //             .getByRole('checkbox');
+
+    const chk1 = page.getByRole('checkbox', {name: 'QA'});
+
+    await chk1.click();
+
+    await page.pause();
+})
