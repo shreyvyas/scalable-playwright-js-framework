@@ -12,7 +12,7 @@ test("IFrame Handling", async ({page}) => {
     
 })
 
-test.only("IFrame Handling1", async ({page}) => {
+test("IFrame Handling1", async ({page}) => {
 
     await page.goto("https://web-locators-static-site-qa.vercel.app/Frames");
 
