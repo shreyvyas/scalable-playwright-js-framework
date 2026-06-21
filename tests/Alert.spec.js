@@ -19,8 +19,6 @@ test("Alert Accept", async ({page}) => {
     })
 
     await page.getByText("Show Alert").click();
-
-    //await page.pause();
     
 })
 

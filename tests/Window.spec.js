@@ -16,6 +16,4 @@ test("Window Handling", async ({page}) => {
 
     await newPage.close();
 
-    await page.pause();
-
 });

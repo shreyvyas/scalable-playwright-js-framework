@@ -19,8 +19,6 @@ test("Handle Edit Box", async ({page}) => {
     await page.getByText("Edit").click();
     
     await page.getByPlaceholder("White").fill("Max and Joy");
-
-    await page.pause();
 })
 
 
@@ -71,8 +69,6 @@ test("Handle Hyperlink", async ({page})=> {
 
     console.log(result);
 
-    await page.pause();
-
 })
 
 test("Check <a> tag", async({page})=> {
@@ -121,7 +117,6 @@ test("Multi Options Dropdown", async ({page}) => {
 
     await locator.selectOption(['Adobe InDesign', 'Adobe Photoshop']);
     
-    await page.pause();
 })
 
 test("Handle Radio Button", async({page})=> {
@@ -132,7 +127,6 @@ test("Handle Radio Button", async({page})=> {
 
     await page.locator("//div[@class='RadioScreen_Container1']//input[@value='female']").click();
 
-    await page.pause();
 })
 
 test("Handle Checkbox", async({page})=> {
@@ -149,5 +143,4 @@ test("Handle Checkbox", async({page})=> {
 
     await chk1.click();
 
-    await page.pause();
 })
