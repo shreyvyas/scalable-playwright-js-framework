@@ -5,7 +5,7 @@ import {test, expect} from '@playwright/test'
 //alert(), confirm(), prompt()
 
 //playwright handles alerts using event listener:
-//accpet(), dismiss(), type(), message()
+//accept(), dismiss(), type(), message()
 
 test("Alert Accept", async ({page}) => {
 
