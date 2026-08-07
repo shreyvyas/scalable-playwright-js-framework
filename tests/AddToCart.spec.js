@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test';
 
-test.only("Add to cart test", async ({page}) => {
+test("Add to cart test", async ({page}) => {
 
     await page.goto("https://crio-qkart-frontend-qa.vercel.app/");
 
@@ -27,6 +27,18 @@ test.only("Add to cart test", async ({page}) => {
     await page.getByRole("textbox", {name: "username"}).fill(username);
     await page.getByRole("textbox", {name: "password"}).fill("test123");
     await page.getByRole("button", {name: "Login to QKart"}).click();
+
+    await page.getByRole('textbox', { name: 'Search for items/categories' }).fill("Shoes");
+
+    console.log(await page.locator(".css-1msksyp").count());
+
+    const addToCart = page.locator(".card")
+                    .filter({hasText:"Roadster Mens Running Shoes"})
+                    .getByRole("button", {name:"Add to cart"});
+
+    await addToCart.click();
+
+    await page.getByRole("button", {name:"Checkout"}).click();
 
     await page.pause();
     
