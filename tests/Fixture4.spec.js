@@ -1,8 +1,9 @@
-import {test} from '@playwright/test';
+import {test} from '../Fixtures/login-fixture';
+import {expect} from '@playwright/test';
 
-test("Using Fixture File", async ({page, message}) => {
-    
-    await message;
+test("custom fixture", async({page, loggedInPage})=> {
+
+    await page.getByRole('textbox', { name: 'Search for items/categories' }).fill("Watch");
 
 })
 

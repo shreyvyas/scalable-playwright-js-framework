@@ -10,4 +10,4 @@ const test = base.extend({
 
 });
 
-export {test};
+export {base};
