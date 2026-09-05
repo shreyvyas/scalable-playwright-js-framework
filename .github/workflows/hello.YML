@@ -1,7 +1,6 @@
-name: My First Workflow
+name: Hello Test
 
-on:
-  push:
+on: push
 
 jobs:
   hello:
